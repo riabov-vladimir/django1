@@ -25,7 +25,7 @@ def home_view(request):
 def time_view(request):
     # обратите внимание – здесь HTML шаблона нет, 
     # возвращается просто текст
-    current_time = datetime.utcnow()
+    current_time = str(datetime.now())[10:-7:]
     msg = f'Текущее время: {current_time}'
     return HttpResponse(msg)
 
